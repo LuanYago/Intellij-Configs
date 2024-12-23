@@ -1,0 +1,29 @@
+set scrolloff=5
+set incsearch
+set relativenumber
+set guicursor= " Bloco no modo normal, linha vertical no modo inserção
+set showmode       " Mostra o modo atual (normal, insert, visual)
+set ruler          " Mostra a posição do cursor (linha/coluna)
+set showcmd        " Mostra os comandos digitados em tempo real
+set tabstop=2        " Define tabulação como 4 espaços
+set shiftwidth=2     " Recuo automático também de 4 espaços
+set softtabstop=2    " Faz o backspace tratar tabs como 4 espaços
+set expandtab        " Converte tabs em espaços
+set autoindent       " Mantém a indentação da linha anterior
+set clipboard=unnamedplus
+set quickscope
+
+let &t_SI = "\e[6 q" "define o cursor solido
+let &t_EI = "\e[2 q" "define o cursor solido
+
+" quickscope configs
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_accepted_chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+let g:qs_primary_color = '#ff0000'
+let g:qs_secondary_color = '#ff00ff'
+let g:qs_disable_for_diffs = 1
+
+map ex :action RecentFiles
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
